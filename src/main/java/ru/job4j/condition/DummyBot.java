@@ -3,13 +3,12 @@ package ru.job4j.condition;
 public class DummyBot {
 
     public static String answer(String question) {
-        String answer;
+        String answer = "I don't know. Please, ask another question.";
         if ("Hi, Bot.".equals(question)) {
             answer = "Hi, SmartAss.";
-        } else if ("Bye.".equals(question)) {
+        }
+        if ("Bye.".equals(question)) {
             answer = "See you later.";
-        } else {
-            answer = "I don't know. Please, ask another question.";
         }
         return answer;
     }
