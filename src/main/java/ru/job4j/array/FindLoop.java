@@ -7,8 +7,8 @@ public class FindLoop {
             massiv[i] = i;
         }
         int goalIndex = -1;
-        for (int i = 0; i < massiv.length; i++) {
-            if (massiv[i] == el) {
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] == el) {
                 goalIndex = i;
                 break;
             }
