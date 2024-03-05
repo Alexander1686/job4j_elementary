@@ -13,10 +13,12 @@ public class Check {
 
     public static void main(String[] args) {
         boolean[] data = new boolean[]{true, true, true};
-        boolean[] data2 = new boolean[]{false, true, false};
+        boolean[] data2 = new boolean[]{true, false, true};
         boolean[] data3 = new boolean[]{false, false, false};
+        boolean[] data4 = new boolean[]{false, true, false};
         System.out.println(Check.mono(data));
         System.out.println(Check.mono(data2));
         System.out.println(Check.mono(data3));
+        System.out.println(Check.mono(data4));
     }
 }
