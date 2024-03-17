@@ -12,10 +12,24 @@ public class FindLoop {
         return goalIndex;
     }
 
+    public static int indexInRange(int[] nums, int element, int start, int finish) {
+        int result = -1; /* если элемента нет в массиве, то возвращаем -1. */
+        /* а это не готовый метод, нужен фор но в него подставляем значения старт финиш искомое */
+        for (int i = start; i < finish; i++) {
+            if (nums[i] == element) {
+                result = element;
+                break;
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         int[] nums = new int[] {1, 2, 3, 4, 5};
         System.out.println(indexOf(nums, 3));
         System.out.println(indexOf(nums, 10));
+        System.out.println(indexInRange(nums, 3, 0, 5));
+        System.out.println(indexInRange(nums, 10, 0, 5));
     }
 }
 
