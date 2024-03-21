@@ -6,15 +6,13 @@ public class FindLoop {
         for (int i = 0; i < data.length; i++) {
             if (data[i] == el) {
                 goalIndex = i;
-                break;
             }
         }
         return goalIndex;
     }
 
     public static int indexInRange(int[] nums, int element, int start, int finish) {
-        int result = -1; /* если элемента нет в массиве, то возвращаем -1. */
-        /* а это не готовый метод, нужен фор но в него подставляем значения старт финиш искомое */
+        int result = -1;
         for (int i = start; i < finish; i++) {
             if (nums[i] == element) {
                 result = element;
