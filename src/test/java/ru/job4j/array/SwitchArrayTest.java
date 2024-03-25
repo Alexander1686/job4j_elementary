@@ -10,7 +10,7 @@ class SwitchArrayTest {
         int source = 0;
         int dest = input.length - 1;
         int[] result = SwitchArray.swap(input, source, dest);
-        int[] expected = {4, 2, 3, 1, 5, 6};
+        int[] expected = {6, 2, 3, 4, 5, 1};
         assertThat(result).containsExactly(expected);
     }
 
