@@ -12,8 +12,8 @@ public class Turn {
     }
 
     public static void main(String[] args) {
-        int[] array1 = new int[]{1, 2, 3, 4, 5, 6, 7};
-        Turn.back(array1);
+        int[] array11 = new int[]{1, 2, 3, 4, 5, 6, 7};
+        Turn.back(array11);
     }
 }
 
