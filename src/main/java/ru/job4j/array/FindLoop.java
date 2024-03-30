@@ -16,7 +16,7 @@ public class FindLoop {
         int result = -1;
         for (int i = start; i < finish; i++) {
             if (nums[i] == element) {
-                result = element;
+                result = i;
             }
         }
         return result;
@@ -26,7 +26,7 @@ public class FindLoop {
         int[] nums = new int[] {1, 2, 3, 4, 5};
         System.out.println(indexOf(nums, 3));
         System.out.println(indexOf(nums, 10));
-        System.out.println(indexInRange(nums, 3, 0, 5));
+        System.out.println(indexInRange(nums, 5, 0, 5));
         System.out.println(indexInRange(nums, 10, 0, 5));
     }
 }
