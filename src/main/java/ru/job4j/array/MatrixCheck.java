@@ -12,14 +12,33 @@ public class MatrixCheck {
         return result;
     }
 
+    public static boolean monoVertical(char[][] board, int column) {
+        boolean result = true;
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][column] != 'X') {
+                result = false;
+                break;
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         char[][] board = {{' ', ' ', ' '}, {'X', 'X', 'X'}, {' ', ' ', ' '}};
         char[][] board1 = {{' ', ' ', ' '}, {'X', 'X', ' '}, {' ', ' ', ' '}};
+        char[][] board2 = {{' ', ' ', 'X'}, {' ', ' ', 'X'}, {' ', ' ', 'X'}};
+        char[][] board3 = {{' ', ' ', 'X'}, {' ', ' ', ' '}, {' ', ' ', 'X'}};
         System.out.println(MatrixCheck.monoHorizontal(board, 0));
         System.out.println(MatrixCheck.monoHorizontal(board, 1));
         System.out.println(MatrixCheck.monoHorizontal(board, 2));
         System.out.println(MatrixCheck.monoHorizontal(board1, 0));
         System.out.println(MatrixCheck.monoHorizontal(board1, 1));
         System.out.println(MatrixCheck.monoHorizontal(board1, 2));
+        System.out.println(MatrixCheck.monoVertical(board2, 0));
+        System.out.println(MatrixCheck.monoVertical(board2, 1));
+        System.out.println(MatrixCheck.monoVertical(board2, 2));
+        System.out.println(MatrixCheck.monoVertical(board3, 0));
+        System.out.println(MatrixCheck.monoVertical(board3, 1));
+        System.out.println(MatrixCheck.monoVertical(board3, 2));
     }
 }
