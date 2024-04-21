@@ -2,15 +2,13 @@ package ru.job4j.array;
 
 public class MatrixCheck {
     public static boolean monoHorizontal(char[][] board, int row) {
-        boolean result = false;
-        for (int i = row; i < board.length; i++) {
+        boolean result = true;
             for (int j = 0; j < board.length; j++) {
-                if (board[row][j] == 'X' && board[row][j + 1] == 'X' && board[row][j + 2] == 'X') {
-                    result = true;
+                if (board[row][j] != 'X') {
+                    result = false;
                     break;
                 }
             }
-        }
         return result;
     }
 
