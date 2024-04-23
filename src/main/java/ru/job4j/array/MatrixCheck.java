@@ -23,11 +23,22 @@ public class MatrixCheck {
         return result;
     }
 
+    public static char[] extractDiagonal(char[][] board) {
+        char[] result = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            result[i] = board[i][i];
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         char[][] board = {{' ', ' ', ' '}, {'X', 'X', 'X'}, {' ', ' ', ' '}};
         char[][] board1 = {{' ', ' ', ' '}, {'X', 'X', ' '}, {' ', ' ', ' '}};
         char[][] board2 = {{' ', ' ', 'X'}, {' ', ' ', 'X'}, {' ', ' ', 'X'}};
         char[][] board3 = {{' ', ' ', 'X'}, {' ', ' ', ' '}, {' ', ' ', 'X'}};
+        char[][] board4 = {{'X', ' ', ' '}, {' ', 'X', ' '}, {' ', ' ', 'X'}};
+        char[][] board5 = {{'1', ' ', ' '}, {' ', '1', ' '}, {' ', ' ', '1'}};
+        char[][] board6 = {{'X', ' ', ' '}, {' ', 'Y', ' '}, {' ', ' ', 'Z'}};
         System.out.println(MatrixCheck.monoHorizontal(board, 0));
         System.out.println(MatrixCheck.monoHorizontal(board, 1));
         System.out.println(MatrixCheck.monoHorizontal(board, 2));
@@ -40,5 +51,8 @@ public class MatrixCheck {
         System.out.println(MatrixCheck.monoVertical(board3, 0));
         System.out.println(MatrixCheck.monoVertical(board3, 1));
         System.out.println(MatrixCheck.monoVertical(board3, 2));
+        System.out.println(MatrixCheck.extractDiagonal(board4));
+        System.out.println(MatrixCheck.extractDiagonal(board5));
+        System.out.println(MatrixCheck.extractDiagonal(board6));
     }
 }
