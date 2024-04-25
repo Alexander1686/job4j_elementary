@@ -31,6 +31,19 @@ public class MatrixCheck {
         return result;
     }
 
+    public static boolean isWin(char[][] board) {
+        boolean result = false;
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][i] == 'X') {
+                if ((monoHorizontal(board, i) || monoVertical(board, i))) {
+                    result = true;
+                    break;
+                }
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         char[][] board = {{' ', ' ', ' '}, {'X', 'X', 'X'}, {' ', ' ', ' '}};
         char[][] board1 = {{' ', ' ', ' '}, {'X', 'X', ' '}, {' ', ' ', ' '}};
@@ -39,6 +52,10 @@ public class MatrixCheck {
         char[][] board4 = {{'X', ' ', ' '}, {' ', 'X', ' '}, {' ', ' ', 'X'}};
         char[][] board5 = {{'1', ' ', ' '}, {' ', '1', ' '}, {' ', ' ', '1'}};
         char[][] board6 = {{'X', ' ', ' '}, {' ', 'Y', ' '}, {' ', ' ', 'Z'}};
+        char[][] board7 = {{' ', ' ', 'X', ' ', ' '}, {' ', ' ', 'X', ' ', ' '}, {' ', ' ', 'X', ' ', ' '}, {' ', ' ', 'X', ' ', ' '}, {' ', ' ', 'X', ' ', ' '}};
+        char[][] board8 = {{' ', ' ', 'X', ' ', ' '}, {' ', ' ', 'X', ' ', ' '}, {' ', 'X', ' ', ' ', ' '}, {' ', ' ', 'X', ' ', ' '}, {' ', ' ', 'X', ' ', ' '}};
+        char[][] board9 = {{' ', ' ', ' ', ' ', ' '}, {' ', ' ', ' ', ' ', ' '}, {'X', 'X', 'X', 'X', 'X'}, {' ', ' ', 'X', ' ', ' '}, {' ', ' ', 'X', ' ', ' '}};
+        char[][] board10 = {{'X', ' ', ' ', ' ', ' '}, {' ', 'X', ' ', ' ', ' '}, {' ', ' ', 'X', ' ', ' '}, {' ', ' ', ' ', 'X', ' '}, {' ', ' ', ' ', ' ', 'X'}};
         System.out.println(MatrixCheck.monoHorizontal(board, 0));
         System.out.println(MatrixCheck.monoHorizontal(board, 1));
         System.out.println(MatrixCheck.monoHorizontal(board, 2));
@@ -54,5 +71,9 @@ public class MatrixCheck {
         System.out.println(MatrixCheck.extractDiagonal(board4));
         System.out.println(MatrixCheck.extractDiagonal(board5));
         System.out.println(MatrixCheck.extractDiagonal(board6));
+        System.out.println(MatrixCheck.isWin(board7));
+        System.out.println(MatrixCheck.isWin(board8));
+        System.out.println(MatrixCheck.isWin(board9));
+        System.out.println(MatrixCheck.isWin(board10));
     }
 }
