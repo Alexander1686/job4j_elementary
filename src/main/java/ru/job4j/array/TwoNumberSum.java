@@ -6,12 +6,11 @@ public class TwoNumberSum {
     public static int[] getIndexes(int[] array, int target) {
         int i = 0;
         int j = array.length - 1;
-        while (i < array.length - 1) {
+        while (i < j) {
             if (target == (array[i] + array[j])) {
                 int[] arr = new int[] {i, j};
                 return arr;
-            }
-            if (target != (array[i] + array[j])) {
+            } else if (target != (array[i] + array[j])) {
                 j--;
             }
             if (array[i] == array[j]) {
@@ -19,8 +18,7 @@ public class TwoNumberSum {
                 j = array.length - 1;
             }
         }
-        int[] arr = new int[0];
-        return arr;
+        int[] arr = new int[0]; return arr;
     }
 
     public static void main(String[] args) {
