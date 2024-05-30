@@ -20,9 +20,9 @@ public class Machine {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(Machine.change(100, 100))); //0
-        System.out.println(Arrays.toString(Machine.change(50, 35))); //15 is 10 and 5
-        System.out.println(Arrays.toString(Machine.change(50, 21))); //29 is 10 10 5 2 2
-        System.out.println(Arrays.toString(Machine.change(50, 32))); //18 is 10 5 2 1
+        System.out.println(Arrays.toString(Machine.change(100, 100)));
+        System.out.println(Arrays.toString(Machine.change(50, 35)));
+        System.out.println(Arrays.toString(Machine.change(50, 21)));
+        System.out.println(Arrays.toString(Machine.change(50, 32)));
     }
 }
