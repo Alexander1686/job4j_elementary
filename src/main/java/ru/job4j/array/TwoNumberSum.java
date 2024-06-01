@@ -10,15 +10,14 @@ public class TwoNumberSum {
             if (target == (array[i] + array[j])) {
                 int[] arr = new int[] {i, j};
                 return arr;
-            } else if (target != (array[i] + array[j])) {
+            } else if (target < (array[i] + array[j])) {
                 j--;
-            }
-            if (array[i] == array[j]) {
+            } else {
                 i++;
                 j = array.length - 1;
             }
         }
-        int[] arr = new int[0]; return arr;
+        return new int[0];
     }
 
     public static void main(String[] args) {
