@@ -10,4 +10,3 @@ public class StringRunner {
         System.out.println(idea);
     }
 }
-

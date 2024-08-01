@@ -11,4 +11,3 @@ public class Triangle {
         System.out.println(exist(10.1, 10.1, 20.1));
     }
 }
-

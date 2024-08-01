@@ -31,4 +31,3 @@ public class FindLoop {
         System.out.println(indexInRange(nums, 10, 0, 4));
     }
 }
-

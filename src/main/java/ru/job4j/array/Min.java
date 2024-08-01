@@ -18,6 +18,5 @@ public class Min {
         System.out.println(Min.findMin(array));
         System.out.println(Min.findMin(array1));
         System.out.println(Min.findMin(array2));
-
     }
 }

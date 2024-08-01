@@ -20,4 +20,3 @@ public class DivideBySix {
         System.out.println(rsl);
     }
 }
-/* формальные правки */

@@ -9,7 +9,6 @@ package ru.job4j.loop;
             year++;
       }
       return year;
-
     }
 
      public static void main(String[] args) {

@@ -13,11 +13,9 @@ public class Machine {
                 result[size] = i;
                 size++;
                 money -= i;
-
             }
         }
         return Arrays.copyOf(result, size);
-
     }
 
     public static void main(String[] args) {
